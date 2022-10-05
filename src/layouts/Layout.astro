@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@300;500;700&display=swap" rel="stylesheet">
+		<title>My Weather App</title>
+	</head>
+	<body>
+		<slot/>
+	</body>
+</html>
+<style is:global>
+	:root{
+		--main-color: #111940;
+		--gray:rgba(255, 255, 255, 0.74);		
+	}
+	*{
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	 font-family: 'M PLUS Rounded 1c', sans-serif;
+	}
+	body{
+	 margin: 0 auto;
+	 max-width: 1128px;
+	}
+</style>

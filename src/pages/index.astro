@@ -1,40 +1,69 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Header from '../layouts/Header.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@300;500;700&display=swap" rel="stylesheet">
-		<title>My Weather App</title>
-	</head>
-	<body>
-		<header>
-			<div class="info">
-				<h1>My Weather App</h1>
-				<img src="">
-			</div>
-			<ul>	
-				<li>
-					<a>
-						Get to know the API
-					</a>
-				</li>
-				<li>
-					<a>
-						Contact me
-					</a>
-				</li>
-				<li>
-					<a>
-						Source
-					</a>
-				</li>
-			</ul>
-		</header>
-	</body>
-</html>
+<Layout title="My Weather App">
+	<Header></Header>
+	<main>
+		<div id="input-container">
+			<form>
+				<input type="text" autocomplete="country-name" placeholder="Enter countries...">
+				<button type="submit">
+					Consult!
+				</button>
+				<button type="reset">
+					Restart
+				</button>
+			</form>
+		</div>
+
+		<div id="cards-container">
+		</div>
+
+	</main>
+</Layout>
+<style>
+	main{
+		margin: 50px 80px;
+	}
+	input{
+		width: 330px;
+		height: 55px;
+		background: rgba(17, 25, 64,0.1);
+		border-radius: 10px;
+		outline: none;
+		text-align: center;
+		font-size: 16px;
+	}
+	input::placeholder{
+		color: var(--main-color);
+		font-size: 16px;
+		text-align: center;
+	}
+	input:focus,
+	input:hover{
+		background: rgba(17, 25, 64, 0.2);
+	}
+	button{
+		cursor: pointer;
+		margin-left: 16px;
+		border: none;
+		width: 158px;
+		height: 55px;
+		color: white;
+		background: var(--main-color);
+		box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.05);
+		border-radius: 10px;
+	}
+	button:hover{
+		transform: scale(1.1);
+	}
+	#card-container{
+		flex-wrap: wrap;
+		justify-content: center;
+		display: flex;
+		gap: 35px;
+		margin-top: 67px;
+	}
+</style>

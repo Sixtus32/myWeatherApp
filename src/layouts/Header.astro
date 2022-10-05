@@ -1,0 +1,81 @@
+<header class="nav">
+	<div class="nav_logo">
+		<h1>My Weather App</h1>
+		<img src="">
+	</div>
+	
+	<ul class="social_list">
+		<li class="social-item">
+			<a>
+				Provider API
+			</a>
+		</li>
+		<li class="social-item">
+			<a>
+				Contact me
+			</a>
+		</li>
+		<li class="social-item">
+			<a>
+				Source
+			</a>
+		</li>
+	</ul>
+	
+</header>
+<style>
+	.nav{
+		margin: 50px 80px 0;
+		display: flex;
+		justify-content: space-between;
+	}
+	.nav_logo{
+		color: var(--main-color);
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+	h1{
+		font-size: 40px;
+	}
+	a{
+		text-decoration: none;
+		color: var(--main-color);
+	}
+	 
+	ul{
+		display: flex;
+		align-items: flex-end;
+		gap: 18px;
+	}
+
+	li{
+		padding: 5px; 
+		cursor: pointer; 
+		list-style: none;	
+	}
+	li a{
+		display: flex;
+		flex-direction: colum;
+		justify-content: center;
+		align-items: center;
+	}
+	li: hover{
+		border-radius: 5px;
+		background: rgba(17, 25, 64, 0.1);
+	}
+	li:hover{
+		border-radius: 5px;
+		background: rgba(17, 25, 64,0.1);
+	}
+	li:nth-child(1) img {
+  		width: 50px;
+  		margin-bottom: -5px;
+	}
+
+	li:nth-child(2) img,
+	li:nth-child(3) img {
+  		width: 37px;
+  		margin-bottom: 5px;
+	}
+</style>
